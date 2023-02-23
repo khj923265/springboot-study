@@ -8,20 +8,11 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.DispatcherServlet;
 
-@Configuration
-@ComponentScan
+
+// 여기까지가 간단하게 구현한거고
+// 다음부터는 Auto Configuration 구조로 확장해나가는 작업을 진행할 예정
+@MySpringBootApplication
 public class HelloSpringBootApplication {
-
-	// 팩토리 메서드를 사용해서 빈으로 등록
-	@Bean
-	public ServletWebServerFactory servletWebServerFactory() {
-		return new TomcatServletWebServerFactory();
-	}
-
-	@Bean
-	public DispatcherServlet dispatcherServlet() {
-		return new DispatcherServlet();
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(HelloSpringBootApplication.class, args);

@@ -11,8 +11,18 @@ public class HelloServiceTest {
     void simpleHelloService() {
         SimpleHelloService simpleHelloService = new SimpleHelloService();
 
-        String res = simpleHelloService.sayHello("springboot");
+        String ret = simpleHelloService.sayHello("springboot");
 
-        Assertions.assertThat(res).isEqualTo("Hello springboot");
+        Assertions.assertThat(ret).isEqualTo("Hello springboot");
+    }
+
+    @DisplayName("hello Decorator 성공 테스트")
+    @Test
+    void helloDecorator() {
+        HelloDecorator decorator = new HelloDecorator(name -> name);
+
+        String ret = decorator.sayHello("springboot");
+
+        Assertions.assertThat(ret).isEqualTo("*springboot*");
     }
 }
