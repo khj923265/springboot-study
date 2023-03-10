@@ -1,2 +1,3 @@
 aco.config.autoconfig.DispatcherServletConfig
 aco.config.autoconfig.TomcatWebServerConfig
+aco.config.autoconfig.JettyWebServerConfig
