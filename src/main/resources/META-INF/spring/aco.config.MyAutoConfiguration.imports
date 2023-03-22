@@ -1,3 +1,5 @@
+aco.config.autoconfig.PropertyPlaceholderConfig
 aco.config.autoconfig.DispatcherServletConfig
 aco.config.autoconfig.TomcatWebServerConfig
 aco.config.autoconfig.JettyWebServerConfig
+aco.config.autoconfig.ServerPropertiesConfig
