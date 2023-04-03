@@ -9,12 +9,23 @@ public class HelloServiceTest {
     @DisplayName("hello service 성공 테스트")
     @Test
     void simpleHelloService() {
-        SimpleHelloService simpleHelloService = new SimpleHelloService();
+        SimpleHelloService simpleHelloService = new SimpleHelloService(helloRepositoryStub);
 
         String ret = simpleHelloService.sayHello("springboot");
 
         Assertions.assertThat(ret).isEqualTo("Hello springboot");
     }
+
+    private static HelloRepository helloRepositoryStub = new HelloRepository() {
+        @Override
+        public Hello findHello(String name) {
+            return null;
+        }
+
+        @Override
+        public void increaseCount(String name) {
+        }
+    };
 
     @DisplayName("hello Decorator 성공 테스트")
     @Test
