@@ -1,3 +1,4 @@
+aco.config.autoconfig.DataSourceConfig
 aco.config.autoconfig.PropertyPlaceholderConfig
 aco.config.autoconfig.DispatcherServletConfig
 aco.config.autoconfig.TomcatWebServerConfig
