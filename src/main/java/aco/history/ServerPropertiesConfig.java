@@ -1,6 +1,7 @@
-package aco.config.autoconfig;
+package aco.history;
 
 import aco.config.MyAutoConfiguration;
+import aco.config.autoconfig.ServerProperties;
 import org.springframework.boot.context.properties.bind.Binder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;

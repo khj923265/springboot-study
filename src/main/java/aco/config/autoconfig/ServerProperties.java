@@ -1,5 +1,8 @@
 package aco.config.autoconfig;
 
+import aco.config.MyConfigurationProperties;
+
+@MyConfigurationProperties(prefix = "server")
 public class ServerProperties {
 
     private String contextPath;
